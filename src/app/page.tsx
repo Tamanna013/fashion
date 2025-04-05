@@ -2,6 +2,7 @@ import { Button } from "./components/ui/button";
 import { Card } from "./components/ui/card";
 import { TrendingUp as Trendies, Sparkles, Camera } from "lucide-react";
 import Link from "next/link";
+import './globals.css';
 import Image from "next/image";
 
 export default function Home() {

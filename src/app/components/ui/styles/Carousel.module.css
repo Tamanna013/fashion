@@ -1,0 +1,66 @@
+.carouselRoot {
+  position: relative;
+}
+
+.carouselOverflow {
+  overflow: hidden;
+}
+
+.carouselContainer {
+  display: flex;
+}
+
+.carouselContainerHorizontal {
+  margin-left: -1rem; /* ml-4 reverse */
+}
+
+.carouselContainerVertical {
+  margin-top: -1rem; /* mt-4 reverse */
+  flex-direction: column;
+}
+
+.carouselItem {
+  min-width: 0;
+  flex-shrink: 0;
+  flex-grow: 0;
+  flex-basis: 100%;
+}
+
+.carouselItemHorizontal {
+  padding-left: 1rem; /* pl-4 */
+}
+
+.carouselItemVertical {
+  padding-top: 1rem; /* pt-4 */
+}
+
+.carouselBtn {
+  position: absolute;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 9999px;
+}
+
+.carouselBtnLeft {
+  left: -3rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carouselBtnRight {
+  right: -3rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carouselBtnTop {
+  top: -3rem;
+  left: 50%;
+  transform: translateX(-50%) rotate(90deg);
+}
+
+.carouselBtnBottom {
+  bottom: -3rem;
+  left: 50%;
+  transform: translateX(-50%) rotate(90deg);
+}

@@ -1,0 +1,76 @@
+/* Overlay */
+.alert-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Content */
+.alert-content {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 50;
+  display: grid;
+  width: 100%;
+  max-width: 32rem;
+  transform: translate(-50%, -50%);
+  gap: 1rem;
+  border: 1px solid #ddd;
+  background: var(--background);
+  padding: 1.5rem;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Header */
+.alert-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+/* Footer */
+.alert-footer {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+@media (min-width: 640px) {
+  .alert-footer {
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 0.5rem;
+  }
+}
+
+/* Title */
+.alert-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+/* Description */
+.alert-description {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+/* Buttons */
+.alert-action {
+  background: #4f46e5;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.alert-cancel {
+  background: #e5e7eb;
+  color: #374151;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}

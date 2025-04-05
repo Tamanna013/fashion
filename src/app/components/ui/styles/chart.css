@@ -1,0 +1,61 @@
+/* chart.css */
+
+.chart-container {
+  display: flex;
+  aspect-ratio: 16/9;
+  justify-content: center;
+  font-size: 0.75rem; /* text-xs */
+
+  /* Targeted Recharts elements */
+}
+
+.chart-container
+  .recharts-cartesian-axis-tick text {
+  fill: var(--muted-foreground);
+}
+
+.chart-container
+  .recharts-cartesian-grid line[stroke='#ccc'] {
+  stroke: var(--border-color);
+  opacity: 0.5;
+}
+
+.chart-container .recharts-curve.recharts-tooltip-cursor {
+  stroke: var(--border-color);
+}
+
+.chart-container .recharts-dot[stroke='#fff'] {
+  stroke: transparent;
+}
+
+.chart-container .recharts-layer {
+  outline: none;
+}
+
+.chart-container .recharts-polar-grid [stroke='#ccc'] {
+  stroke: var(--border-color);
+}
+
+.chart-container .recharts-radial-bar-background-sector {
+  fill: var(--muted);
+}
+
+.chart-container .recharts-rectangle.recharts-tooltip-cursor {
+  fill: var(--muted);
+}
+
+.chart-container .recharts-reference-line [stroke='#ccc'] {
+  stroke: var(--border-color);
+}
+
+.chart-container .recharts-sector[stroke='#fff'] {
+  stroke: transparent;
+}
+
+.chart-container .recharts-sector {
+  outline: none;
+}
+
+.chart-container .recharts-surface {
+  outline: none;
+}

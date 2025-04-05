@@ -1,0 +1,75 @@
+.accordionItem {
+  border-bottom: 1px solid var(--border-color, #e5e7eb); /* default Tailwind border-b */
+}
+
+.accordionHeader {
+  display: flex;
+}
+
+.accordionTrigger {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem; /* py-4 */
+  padding-bottom: 1rem;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+.accordionTrigger:hover {
+  text-decoration: underline;
+}
+
+.accordionTrigger[data-state='open'] > svg {
+  transform: rotate(180deg);
+}
+
+.accordionChevron {
+  height: 1rem; /* h-4 */
+  width: 1rem;  /* w-4 */
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+
+.accordionContent {
+  overflow: hidden;
+  font-size: 0.875rem; /* text-sm */
+  transition: all 0.3s ease-in-out;
+}
+
+.accordionContent[data-state='closed'] {
+  animation: accordion-up 0.2s ease-out;
+}
+
+.accordionContent[data-state='open'] {
+  animation: accordion-down 0.2s ease-out;
+}
+
+.accordionInnerContent {
+  padding-top: 0;
+  padding-bottom: 1rem; /* pb-4 */
+}
+
+/* You can define these animations in a global CSS or here: */
+@keyframes accordion-down {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+    opacity: 1;
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+    opacity: 1;
+  }
+  to {
+    height: 0;
+    opacity: 0;
+  }
+}
